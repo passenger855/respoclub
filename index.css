@@ -1,0 +1,164 @@
+/* general styles */
+.body {
+    color: whitesmoke;
+    background-color: lightseagreen;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.body h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.body h2 {
+    font-size: 2rem;
+}
+
+.body h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+img {
+    height: 400px;
+    width: auto;
+}
+
+/* header */
+.header {
+    display: inline-flex;
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.header p {
+    padding: 25px; 
+    color: lightseagreen;
+}
+
+/* banner */
+.banner {
+    height: 200px;
+    width: 100%;
+}
+.banner h1 {
+    margin-top: 75px;
+    margin-left: 25px;
+}
+.banner h2 {
+    margin-top: 10px;
+    margin-left: 40px;
+}   
+
+/* main for mobile */
+@media only screen and (max-width: 600px) {
+    .body {
+        background-color: lightsteelblue;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-row-gap: 10px;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        justify-self: center;
+    }
+
+    .body h3 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .textjoin {
+        justify-self: center;
+    }
+}
+
+/* main for desktop */
+
+@media only screen and (min-width: 800px) {
+    .grid {
+        display: inline-grid;
+        grid-template-columns: 25px auto auto 25px;
+        grid-template-rows: repeat(7, auto);
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-areas: 
+            ". pic1 pic2 ."
+            ". text1 text1 ."
+            ". pic3 pic4 ."
+            ". pic5 pic5 . "
+            ". text2 text2 ."
+            ". picjoin textjoin ."
+            ". . . .";
+    }
+
+    .pic1 {
+        grid-area: pic1;
+    }
+
+    .pic2 {
+        grid-area: pic2;
+    }
+
+    .quote1 {
+        grid-area: text1;
+        align-self: center;
+    }
+
+    .pic3 {
+        grid-area: pic3;
+    }
+
+    .pic4 {
+        grid-area: pic4;
+    }
+
+
+    .pic5 {
+        grid-area: pic5;
+        justify-self: center;
+    }
+
+    .quote2 {
+        grid-area: text2;
+        align-self: center;
+    }
+
+    .picjoin {
+        grid-area: picjoin;
+        justify-self: end;
+    }
+
+
+    .textjoin {
+        grid-area: textjoin;
+        align-self: center;
+    }
+
+}
+
+/* footer */
+.footer {
+    display: inline-flex;
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.footer p {
+    padding: 25px; 
+    color: lightseagreen;
+}
